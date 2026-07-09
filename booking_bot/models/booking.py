@@ -4,7 +4,7 @@ from sqlalchemy.sql import func
 from datetime import datetime
 
 from booking_bot.database import Base
-from booking_bot.core.message_bus import Channel
+from booking_bot.core.enums import Channel
 
 
 class Booking(Base):

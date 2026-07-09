@@ -1,9 +1,9 @@
-import aiohttp
+﻿import aiohttp
 from aiohttp import web
 from datetime import datetime
 import structlog
 
-from booking_bot.core.message_bus import UnifiedMessage, UnifiedResponse, Channel
+from booking_bot.core.enums import Channel
 from booking_bot.core.config import settings
 
 logger = structlog.get_logger()

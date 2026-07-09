@@ -1,10 +1,10 @@
-from sqlalchemy.ext.asyncio import AsyncSession
+﻿from sqlalchemy.ext.asyncio import AsyncSession
 from datetime import datetime, timedelta
 from typing import Optional
 import structlog
 
 from booking_bot.models.booking import Booking
-from booking_bot.core.message_bus import UnifiedMessage, UnifiedResponse, Channel
+from booking_bot.core.enums import Channel
 from booking_bot.services.state_service import StateService
 from booking_bot.integrations.google_calendar import GoogleCalendarService
 from booking_bot.integrations.ai_service import AIService

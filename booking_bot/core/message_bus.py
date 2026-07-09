@@ -4,12 +4,12 @@ from datetime import datetime
 from typing import Optional, Any
 
 
-class Channel(str, Enum):
-    TELEGRAM = "telegram"
-    VK = "vk"
-    MAX = "max"
+from booking_bot.core.enums import Channel
 
+from typing import TYPE_CHECKING
 
+if TYPE_CHECKING:
+    from booking_bot.services.booking_service import BookingService
 class UnifiedMessage(BaseModel):
     channel: Channel
     external_user_id: str
@@ -86,6 +86,13 @@ class MessageBus:
                         text="👋 Привет! Я помогу забронировать столик.\n\n"
                              "Напишите 'забронировать' или /start"
                     )
+            if state or (message.text and "брон" in message.text.lower()):
+                # Локальный импорт для избежания circular import
+                from booking_bot.services.booking_service import BookingService
+                
+                async with async_session() as db:
+                    booking_service = BookingService(...)
+                    return await booking_service.handle(message)
             
             return UnifiedResponse(
                 text="👋 Привет! Я бот для бронирования столиков.\n\n"

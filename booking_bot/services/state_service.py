@@ -1,8 +1,8 @@
-import redis.asyncio as redis
+﻿import redis.asyncio as redis
 from typing import Optional, Any
 import json
 
-from booking_bot.core.message_bus import Channel
+from booking_bot.core.enums import Channel
 
 
 class StateService:

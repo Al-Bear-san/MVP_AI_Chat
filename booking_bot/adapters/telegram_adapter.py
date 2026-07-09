@@ -1,10 +1,10 @@
-from aiogram import Bot, Dispatcher, Router, F
+﻿from aiogram import Bot, Dispatcher, Router, F
 from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery
 from aiogram.enums import ParseMode
 import structlog
 
-from booking_bot.core.message_bus import UnifiedMessage, UnifiedResponse, Channel
+from booking_bot.core.enums import Channel
 from booking_bot.core.config import settings
 
 logger = structlog.get_logger()
