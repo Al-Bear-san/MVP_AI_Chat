@@ -10,9 +10,7 @@ from alembic import context
 # Импортируем настройки и метаданные из проекта
 from booking_bot.core.config import settings
 from booking_bot.database import Base
-
-# ВАЖНО: Импортируем все модели, чтобы они зарегистрировались в metadata
-from booking_bot.models import booking, user  # Добавь review, когда создашь
+from booking_bot.models import booking, user
 
 # this is the Alembic Config object
 config = context.config
