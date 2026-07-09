@@ -17,8 +17,8 @@ class Booking(Base):
     guest_phone = Column(String, nullable=False)
     guests_count = Column(Integer, nullable=False)
     booking_datetime = Column(DateTime, nullable=False, index=True)
-    status = Column(String, default="confirmed", nullable=False)  # confirmed/cancelled/completed
-    metadata = Column(JSONB, default={})
+    status = Column(String, default="confirmed", nullable=False)
+    extra_data = Column("metadata", JSONB, default=dict)  # ← ИСПРАВЛЕНО
     created_at = Column(DateTime, default=func.now(), nullable=False)
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now(), nullable=False)
     
