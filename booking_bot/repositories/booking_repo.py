@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 
 from booking_bot.models.booking import Booking
@@ -32,7 +32,7 @@ class BookingRepository:
     
     async def get_upcoming(self, hours: int = 24) -> list[Booking]:
         now = datetime.utcnow()
-        future = datetime.utcnow() + timedelta(hours=hours)
+        future = now + timedelta(hours=hours)
         
         result = await self.db.execute(
             select(Booking)

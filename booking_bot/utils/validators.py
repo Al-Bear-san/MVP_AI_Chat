@@ -34,4 +34,4 @@ def validate_guests_count(count: str) -> Optional[int]:
 
 def validate_name(name: str) -> bool:
     """Валидация имени"""
-    return len(name.strip()) >= 2 and name.isalpha()
+    return len(name.strip()) >= 2 and name.replace(" ", "").isalpha()

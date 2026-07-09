@@ -59,7 +59,6 @@ class ReminderService:
     
     def _should_send_reminder(self, booking) -> bool:
         """Проверка, нужно ли отправлять напоминание"""
-        # Логика: за 2 часа до брони, если статус confirmed
         time_diff = booking.booking_datetime - datetime.utcnow()
         return timedelta(hours=1.5) <= time_diff <= timedelta(hours=2.5)
     

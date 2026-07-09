@@ -4,10 +4,10 @@ version = "1.0.0"
 description = "Multi-channel AI booking bot for HoReCa"
 authors = ["AlSuBear <sahasipchenko@gmail.com>"]
 readme = "README.md"
-packages = [{include = "booking_bot"}]  # ← ОБЯЗАТЕЛЬНО ДОБАВЬ ЭТУ СТРОКУ
+packages = [{include = "booking_bot"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.13"
 pydantic = "^2.5"
 pydantic-settings = "^2.1"
 aiogram = "^3.4"

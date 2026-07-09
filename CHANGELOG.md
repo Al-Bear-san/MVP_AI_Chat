@@ -9,3 +9,4 @@
 - Google Calendar integration
 - OpenAI integration for reminders
 - Docker deployment
+- Alembic migrations

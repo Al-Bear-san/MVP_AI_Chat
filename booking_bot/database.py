@@ -3,6 +3,7 @@ from sqlalchemy.orm import DeclarativeBase
 
 from booking_bot.core.config import settings
 
+from sqlalchemy.orm import DeclarativeBase
 
 class Base(DeclarativeBase):
     pass

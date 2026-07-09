@@ -21,4 +21,3 @@ class BaseAdapter(ABC):
     async def _handle_message(self, message: UnifiedMessage) -> UnifiedResponse:
         """Обработка входящего сообщения"""
         return await self.message_bus.process(message)
-    
