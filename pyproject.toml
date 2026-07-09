@@ -2,7 +2,9 @@
 name = "booking-bot"
 version = "1.0.0"
 description = "Multi-channel AI booking bot for HoReCa"
-authors = ["Developer <dev@example.com>"]
+authors = ["AlSuBear <sahasipchenko@gmail.com>"]
+readme = "README.md"
+packages = [{include = "booking_bot"}]  # ← ОБЯЗАТЕЛЬНО ДОБАВЬ ЭТУ СТРОКУ
 
 [tool.poetry.dependencies]
 python = "^3.11"
